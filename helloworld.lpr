@@ -9,18 +9,9 @@ uses
   Classes, SysUtils, CustApp
   { you can add sunits after this };
 
+
+
 type
-  Tdata = record
-    name:string;
-    pay:integer;
-  end;
-  PTNode = ^TNode;
-  TNode = record
-      data:Tdata;
-      next:PTNode;
-  end;
-
-
   { THelloWorldApplication }
 
   THelloWorldApplication = class(TCustomApplication)
@@ -39,7 +30,7 @@ var
   ErrorMsg: String;
   input_msg:string;
 begin
-  repeat
+
   // quick check parameters
   ErrorMsg:=CheckOptions('h', 'help');
   if ErrorMsg<>'' then begin
@@ -62,9 +53,11 @@ begin
      WriteLn('HelloWorld '+ input_msg);
   end;
 
-  until (input_msg = 'exit');
+  if (input_msg = 'exit') then
+  begin
   // stop program loop
   Terminate;
+  end;
 end;
 
 constructor THelloWorldApplication.Create(TheOwner: TComponent);

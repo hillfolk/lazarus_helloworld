@@ -39,7 +39,7 @@ var
   ErrorMsg: String;
   input_msg:string;
 begin
-  repeat
+
   // quick check parameters
   ErrorMsg:=CheckOptions('h', 'help');
   if ErrorMsg<>'' then begin
@@ -59,12 +59,14 @@ begin
   { add your program here }
   if input_msg <> 'exit' then
   begin
-     WriteLn('HelloWorld'+ input_msg);
+     WriteLn('HelloWorld '+ input_msg);
   end;
 
-  until (input_msg = 'exit');
+  if (input_msg = 'exit') then
+  begin
   // stop program loop
   Terminate;
+  end;
 end;
 
 constructor THelloWorldApplication.Create(TheOwner: TComponent);

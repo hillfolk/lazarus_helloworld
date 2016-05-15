@@ -8,7 +8,8 @@
         <Filename Value="helloworld.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="16" Y="15"/>
+        <TopLine Value="28"/>
+        <CursorPos X="37" Y="62"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
